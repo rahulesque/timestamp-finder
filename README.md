@@ -20,11 +20,14 @@ Timestamp Finder is a live, shipped product. This repo documents how it's built;
 
 ```
 apps/web/
-├── public/           # favicon, og-image, brand assets
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── styles/
+├── index.html
+├── privacy.html
+├── support.html
+├── styles.css
+├── script.js
+├── assets/
+│   ├── og-image.png
+│   └── screenshots/
 └── README.md
 ```
 
@@ -34,6 +37,12 @@ apps/web/
 - Primary CTA is the Chrome Web Store; Firefox is secondary.
 - Brand assets (favicon, icons) stay in sync with the extension icon set.
 - Deploys to Cloudflare automatically on merge to `main`.
+
+## AI usage
+
+The HTML, CSS, and JS in this folder were implemented with Claude (Anthropic), from a design created in Figma. The design itself — layout, copy, visual direction — was made independently; Claude translated it into working code and helped debug the Cloudflare deployment.
+
+The [browser extension](../extension) is being built independently, without AI assistance, as the primary technical work behind this project.
 
 ## License
 
