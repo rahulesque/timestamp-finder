@@ -1,40 +1,26 @@
 # Timestamp Finder — Marketing Site
 
-Landing page for [Timestamp Finder](https://timestampfinder.com), a Chrome extension that lets you search YouTube video transcripts by keyword and jump straight to the moment it's said.
+Source for [timestampfinder.com](https://timestampfinder.com), the marketing site for **Timestamp Finder** — search any YouTube video's transcript by keyword and jump straight to the moment it's said.
 
-🔗 **Live site:** [timestampfinder.com](https://timestampfinder.com)
-🧩 **Extension repo:** [`apps/extension`](../extension)
+🔗 **Product:** [timestampfinder.com](https://timestampfinder.com)
+🧩 **Get the extension:** [Chrome Web Store](#) · Firefox (coming soon)
+
+This folder is the source for the live site — kept here for version history and as part of the product record, not as a template meant for others to spin up.
+
+## What this is
+
+Timestamp Finder is a live, shipped product. This repo documents how it's built; it isn't an invite to fork, self-host, or run a competing instance. See [LICENSE](../../LICENSE) for terms.
 
 ## Stack
 
 - Static site hosted on Cloudflare
-- Part of the `timestamp-finder` pnpm monorepo
-
-## Development
-
-```bash
-# from repo root
-pnpm install
-
-# run the web app
-pnpm --filter web dev
-```
-
-The site runs locally at `http://localhost:<port>`.
-
-### Build
-
-```bash
-pnpm --filter web build
-```
-
-Output is deployed to Cloudflare on merge to `main`.
+- Part of the `timestamp-finder` monorepo, alongside the [extension](../extension)
 
 ## Structure
 
 ```
 apps/web/
-├── public/           # static assets (favicon, og-image, etc.)
+├── public/           # favicon, og-image, brand assets
 ├── src/
 │   ├── components/
 │   ├── pages/
@@ -42,16 +28,13 @@ apps/web/
 └── README.md
 ```
 
-## Content notes
+## Notes
 
-- **Privacy Policy** is linked in both the nav and footer — required for Chrome Web Store listing, don't remove.
-- Primary CTA points to the Chrome Web Store; Firefox is secondary.
-- Brand assets (favicon, icons) should stay in sync with the extension's icon set in `apps/extension`.
-
-## Deployment
-
-Pushes to `main` auto-deploy via Cloudflare. No manual deploy step required.
+- **Privacy Policy** is linked in both nav and footer — required for the Chrome Web Store listing.
+- Primary CTA is the Chrome Web Store; Firefox is secondary.
+- Brand assets (favicon, icons) stay in sync with the extension icon set.
+- Deploys to Cloudflare automatically on merge to `main`.
 
 ## License
 
-MIT — see [LICENSE](../../LICENSE) in the repo root.
+See [LICENSE](../../LICENSE) in the repo root.
