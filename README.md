@@ -28,7 +28,6 @@ apps/web/
 ├── assets/
 │   ├── og-image.png
 │   └── screenshots/
-└── README.md
 ```
 
 ## Notes
